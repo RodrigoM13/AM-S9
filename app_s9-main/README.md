@@ -15,6 +15,7 @@ Esta aplicación Android permite a los usuarios:
 - Guarda el nombre del usuario.
 - Genera un ID aleatorio entre 1000 y 9999.
 - Almacena la información en `SharedPreferences`.
+- Son 2 registros, uno se encuentra en el main, otro en el registro; son totalmente independientes.
 
 ![Registro de Nombre](screenshots/Ingresar_Nombre_Main.png)
 ![Registro Exitoso](screenshots/Registro.png)
