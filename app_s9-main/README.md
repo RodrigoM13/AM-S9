@@ -1,76 +1,40 @@
-# App S9 - SharedPreferences Demo
+# 📱 App S9 - Registro de Usuario y Preferencias
 
-Aplicación Android de ejemplo que demuestra el uso básico de SharedPreferences para almacenamiento persistente de datos.
+Esta aplicación Android permite a los usuarios:
+- Guardar su nombre e ID de usuario aleatorio.
+- Contar cuántas veces se ha abierto la app.
+- Reiniciar el contador.
+- Ver usuarios almacenados.
+- Cambiar el tema entre claro y oscuro (modo noche).
+- Navegar entre secciones mediante una barra de navegación inferior.
+- Borrar todas las preferencias, datos almacenados.
 
-## 📱 Descripción
+## 🚀 Características Principales
 
-Esta aplicación implementa un sistema simple de SharedPreferences que permite:
-- Guardar y recuperar datos de usuario
-- Detectar la primera ejecución de la app
-- Limpiar todas las preferencias guardadas
+### 👤 Registro de Usuario
+- Guarda el nombre del usuario.
+- Genera un ID aleatorio entre 1000 y 9999.
+- Almacena la información en `SharedPreferences`.
 
-## 🚀 Características
+### 📊 Contador de Apertura de la App
+- Aumenta **una sola vez por sesión** al abrir la aplicación.
+- Se muestra visualmente cuántas veces se ha abierto.
+- Opción para **reiniciar** el contador manualmente.
 
-- **SharedPreferencesHelper**: Clase wrapper para simplificar el uso de SharedPreferences
-- **Tipos de datos soportados**: String, Boolean, Int, Float, Long
-- **Interfaz simple**: Campos de entrada y botones para interactuar con las preferencias
-- **Persistencia**: Los datos se mantienen incluso después de cerrar la aplicación
+### 🌗 Modo Claro / Oscuro
+- Guarda la preferencia del tema usando `SharedPreferences`.
+- Se aplica automáticamente en futuros inicios.
 
-## 📋 Requisitos
+### 📂 Persistencia de Datos
+- Usa `SharedPreferences` para almacenar y recuperar:
+  - Nombre de usuario
+  - ID de usuario
+  - Contador de aperturas
+  - Preferencia de tema
+  - Estado de sesión
 
-- Android Studio Arctic Fox o superior
-- SDK mínimo: API 21 (Android 5.0)
-- SDK objetivo: API 34 (Android 14)
-- Kotlin 1.9.0
+### 🔄 Navegación Inferior (Bottom Navigation View)
+- `Inicio`: pantalla principal con formulario y contador.
+- `Usuarios`: lista de usuarios registrados.
+- `Preferencias`: selector de tema (claro / oscuro).
 
-## 🛠️ Instalación
-
-1. Clona el repositorio:
-```bash
-git clone https://github.com/GxJohan/app_s9.git
-```
-
-2. Abre el proyecto en Android Studio
-
-3. Sincroniza el proyecto con Gradle
-
-4. Ejecuta la aplicación en un emulador o dispositivo físico
-
-## 💻 Uso
-
-1. **Guardar datos**: Ingresa tu nombre y presiona "Guardar"
-2. **Cargar datos**: Presiona "Cargar" para ver los datos guardados
-3. **Limpiar datos**: Presiona "Limpiar Todo" para eliminar todas las preferencias
-
-## 📂 Estructura del Proyecto
-
-```
-app_s9/
-├── app/
-│   └── src/
-│       └── main/
-│           ├── java/com/example/app_s9/
-│           │   ├── MainActivity.kt
-│           │   └── SharedPreferencesHelper.kt
-│           └── res/
-│               └── layout/
-│                   └── activity_main.xml
-└── SharedPreferences_Guide.md
-```
-
-## 📖 Documentación
-
-Para más detalles sobre la implementación y cómo extender la funcionalidad, consulta [SharedPreferences_Guide.md](SharedPreferences_Guide.md)
-
-## 🤝 Contribuciones
-
-Las contribuciones son bienvenidas. Por favor:
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
-
-## 📄 Licencia
-
-Este proyecto es de código abierto y está disponible bajo la Licencia MIT.
